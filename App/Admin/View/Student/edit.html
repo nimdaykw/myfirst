@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>编辑学生</title>
+</head>
+<body>
+<form action="?C=Student&A=update" method="post">
+    <table border="1" cellspacing="0" cellpadding="2" rules="all" width="600" align="center">
+        <tr>
+            <td width="20%">姓名：</td>
+            <td>
+                <input type="text" name="name" value="{$row.name}">
+            </td>
+        </tr>
+        <tr>
+            <td width="20%">年龄：</td>
+            <td>
+                <input type="text" name="age" value="{$row.age}">
+            </td>
+        </tr>
+        <tr>
+            <td width="20%">性别：</td>
+            <td>
+                <input type="radio" name="sex" value="男" {if $row.sex == '男'}checked{/if}>男
+                <input type="radio" name="sex" value="女" {if $row.sex == '女'}checked{/if}>女
+            </td>
+        </tr>
+        <tr>
+            <td width="20%">学历：</td>
+            <td>
+                <select name="edu" selected='{$row.edu}'>
+                    <option value="初中" {if $row.edu=='初中'}selected{/if} >初中</option>
+                    <option value="高中" {if $row.edu=='高中'}selected{/if} >高中</option>
+                    <option value="大专" {if $row.edu=='大专'}selected{/if} >大专</option>
+                    <option value="大本" {if $row.edu=='大本'}selected{/if} >大本</option>
+                    <option value="研究生" {if $row.edu=='研究生'}selected{/if} >研究生</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td width="20%">城市：</td>
+            <td>
+                <input type="text" name="city" value="{$row.city}">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <!--<input type="hidden" name="id" value="{$smarty.get.id}">-->
+                <input type="hidden" name="id" value="{$row.id}">
+                <input type="submit" value="修改" />
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

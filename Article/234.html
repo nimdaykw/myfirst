@@ -1,0 +1,969 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>abcdef.js</title>
+<meta name="keywords" content="abcdef.js" />
+<meta name="description" content="asdasdasdsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" />
+  <link href="../Public/Home/css/base.css" rel="stylesheet">
+  <link href="../Public/Home/css/style.css" rel="stylesheet">
+  <link href="../Public/Home/css/media.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+  <!--[if lt IE 9]>
+  <script src="../Public/Home/js/modernizr.js"></script>
+<![endif]-->
+  <link rel="stylesheet" href="../Public/highlight/default.css">
+  <script src="../Public/highlight/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+<div class="ibody">
+  <header>
+    <h1>如影随形</h1>
+    <h2>影子是一个会撒谎的精灵，它在虚空中流浪和等待被发现之间;在存在与不存在之间....</h2>
+    <div class="logo"><a href="#"></a></div>
+    <nav id="topnav">
+                    <a href="../../Home/index.html">首页</a>
+                                                                                                                                                                                                                                                                                                                                    <a href="/List/4/1.html">相册</a>
+                                                            <a href="/List/3/1.html">学无止境</a>
+                                                            <a href="/List/2/1.html">慢生活</a>
+                                                            <a href="/List/1/1.html">关于我22</a>
+                            
+        
+    </nav>
+</header>
+  <article>
+    <h2 class="about_h">您现在的位置是： <a href="../Home/index.html">首页</a>>
+            <a href="../List/3/1.html">学无止境</a>>
+            <a href="../List/10/1.html">JavaScript</a>>
+      
+      <span style="color:red">abcdef.js</span>
+    </h2>
+    <div class="index_about">
+      <h2 class="c_titile">abcdef.js</h2>
+      <p class="box_c"><span class="d_time">发布时间：2017-02-28</span>
+        <span>分类：<a href="../List/10/1.html">JavaScript</a></span>
+        <span>浏览（123456）</span><span>评论览（14）</span></p>
+      <ul class="infos">
+        <pre>
+<code class="language-javascript">/* Modernizr 2.6.2 (Custom Build) | MIT &amp; BSD
+ * Build: http://modernizr.com/download/#-fontface-backgroundsize-borderimage-borderradius-boxshadow-flexbox-hsla-multiplebgs-opacity-rgba-textshadow-cssanimations-csscolumns-generatedcontent-cssgradients-cssreflections-csstransforms-csstransforms3d-csstransitions-applicationcache-canvas-canvastext-draganddrop-hashchange-history-audio-video-indexeddb-input-inputtypes-localstorage-postmessage-sessionstorage-websockets-websqldatabase-webworkers-geolocation-inlinesvg-smil-svg-svgclippaths-touch-webgl-shiv-cssclasses-addtest-prefixed-teststyles-testprop-testallprops-hasevent-prefixes-domprefixes-load
+ */
+;
+
+
+
+window.Modernizr = (function( window, document, undefined ) {
+
+    var version = &#39;2.6.2&#39;,
+
+    Modernizr = {},
+
+    enableClasses = true,
+
+    docElement = document.documentElement,
+
+    mod = &#39;modernizr&#39;,
+    modElem = document.createElement(mod),
+    mStyle = modElem.style,
+
+    inputElem  = document.createElement(&#39;input&#39;)  ,
+
+    smile = &#39;:)&#39;,
+
+    toString = {}.toString,
+
+    prefixes = &#39; -webkit- -moz- -o- -ms- &#39;.split(&#39; &#39;),
+
+
+
+    omPrefixes = &#39;Webkit Moz O ms&#39;,
+
+    cssomPrefixes = omPrefixes.split(&#39; &#39;),
+
+    domPrefixes = omPrefixes.toLowerCase().split(&#39; &#39;),
+
+    ns = {&#39;svg&#39;: &#39;http://www.w3.org/2000/svg&#39;},
+
+    tests = {},
+    inputs = {},
+    attrs = {},
+
+    classes = [],
+
+    slice = classes.slice,
+
+    featureName, 
+
+
+    injectElementWithStyles = function( rule, callback, nodes, testnames ) {
+
+      var style, ret, node, docOverflow,
+          div = document.createElement(&#39;div&#39;),
+                body = document.body,
+                fakeBody = body || document.createElement(&#39;body&#39;);
+
+      if ( parseInt(nodes, 10) ) {
+                      while ( nodes-- ) {
+              node = document.createElement(&#39;div&#39;);
+              node.id = testnames ? testnames[nodes] : mod + (nodes + 1);
+              div.appendChild(node);
+          }
+      }
+
+                style = [&#39;&shy;&#39;,&#39;&#39;].join(&#39;&#39;);
+      div.id = mod;
+          (body ? div : fakeBody).innerHTML += style;
+      fakeBody.appendChild(div);
+      if ( !body ) {
+                fakeBody.style.background = &#39;&#39;;
+                fakeBody.style.overflow = &#39;hidden&#39;;
+          docOverflow = docElement.style.overflow;
+          docElement.style.overflow = &#39;hidden&#39;;
+          docElement.appendChild(fakeBody);
+      }
+
+      ret = callback(div, rule);
+        if ( !body ) {
+          fakeBody.parentNode.removeChild(fakeBody);
+          docElement.style.overflow = docOverflow;
+      } else {
+          div.parentNode.removeChild(div);
+      }
+
+      return !!ret;
+
+    },
+
+
+
+    isEventSupported = (function() {
+
+      var TAGNAMES = {
+        &#39;select&#39;: &#39;input&#39;, &#39;change&#39;: &#39;input&#39;,
+        &#39;submit&#39;: &#39;form&#39;, &#39;reset&#39;: &#39;form&#39;,
+        &#39;error&#39;: &#39;img&#39;, &#39;load&#39;: &#39;img&#39;, &#39;abort&#39;: &#39;img&#39;
+      };
+
+      function isEventSupported( eventName, element ) {
+
+        element = element || document.createElement(TAGNAMES[eventName] || &#39;div&#39;);
+        eventName = &#39;on&#39; + eventName;
+
+            var isSupported = eventName in element;
+
+        if ( !isSupported ) {
+                if ( !element.setAttribute ) {
+            element = document.createElement(&#39;div&#39;);
+          }
+          if ( element.setAttribute &amp;&amp; element.removeAttribute ) {
+            element.setAttribute(eventName, &#39;&#39;);
+            isSupported = is(element[eventName], &#39;function&#39;);
+
+                    if ( !is(element[eventName], &#39;undefined&#39;) ) {
+              element[eventName] = undefined;
+            }
+            element.removeAttribute(eventName);
+          }
+        }
+
+        element = null;
+        return isSupported;
+      }
+      return isEventSupported;
+    })(),
+
+
+    _hasOwnProperty = ({}).hasOwnProperty, hasOwnProp;
+
+    if ( !is(_hasOwnProperty, &#39;undefined&#39;) &amp;&amp; !is(_hasOwnProperty.call, &#39;undefined&#39;) ) {
+      hasOwnProp = function (object, property) {
+        return _hasOwnProperty.call(object, property);
+      };
+    }
+    else {
+      hasOwnProp = function (object, property) { 
+        return ((property in object) &amp;&amp; is(object.constructor.prototype[property], &#39;undefined&#39;));
+      };
+    }
+
+
+    if (!Function.prototype.bind) {
+      Function.prototype.bind = function bind(that) {
+
+        var target = this;
+
+        if (typeof target != &quot;function&quot;) {
+            throw new TypeError();
+        }
+
+        var args = slice.call(arguments, 1),
+            bound = function () {
+
+            if (this instanceof bound) {
+
+              var F = function(){};
+              F.prototype = target.prototype;
+              var self = new F();
+
+              var result = target.apply(
+                  self,
+                  args.concat(slice.call(arguments))
+              );
+              if (Object(result) === result) {
+                  return result;
+              }
+              return self;
+
+            } else {
+
+              return target.apply(
+                  that,
+                  args.concat(slice.call(arguments))
+              );
+
+            }
+
+        };
+
+        return bound;
+      };
+    }
+
+    function setCss( str ) {
+        mStyle.cssText = str;
+    }
+
+    function setCssAll( str1, str2 ) {
+        return setCss(prefixes.join(str1 + &#39;;&#39;) + ( str2 || &#39;&#39; ));
+    }
+
+    function is( obj, type ) {
+        return typeof obj === type;
+    }
+
+    function contains( str, substr ) {
+        return !!~(&#39;&#39; + str).indexOf(substr);
+    }
+
+    function testProps( props, prefixed ) {
+        for ( var i in props ) {
+            var prop = props[i];
+            if ( !contains(prop, &quot;-&quot;) &amp;&amp; mStyle[prop] !== undefined ) {
+                return prefixed == &#39;pfx&#39; ? prop : true;
+            }
+        }
+        return false;
+    }
+
+    function testDOMProps( props, obj, elem ) {
+        for ( var i in props ) {
+            var item = obj[props[i]];
+            if ( item !== undefined) {
+
+                            if (elem === false) return props[i];
+
+                            if (is(item, &#39;function&#39;)){
+                                return item.bind(elem || obj);
+                }
+
+                            return item;
+            }
+        }
+        return false;
+    }
+
+    function testPropsAll( prop, prefixed, elem ) {
+
+        var ucProp  = prop.charAt(0).toUpperCase() + prop.slice(1),
+            props   = (prop + &#39; &#39; + cssomPrefixes.join(ucProp + &#39; &#39;) + ucProp).split(&#39; &#39;);
+
+            if(is(prefixed, &quot;string&quot;) || is(prefixed, &quot;undefined&quot;)) {
+          return testProps(props, prefixed);
+
+            } else {
+          props = (prop + &#39; &#39; + (domPrefixes).join(ucProp + &#39; &#39;) + ucProp).split(&#39; &#39;);
+          return testDOMProps(props, prefixed, elem);
+        }
+    }    tests[&#39;flexbox&#39;] = function() {
+      return testPropsAll(&#39;flexWrap&#39;);
+    };    tests[&#39;canvas&#39;] = function() {
+        var elem = document.createElement(&#39;canvas&#39;);
+        return !!(elem.getContext &amp;&amp; elem.getContext(&#39;2d&#39;));
+    };
+
+    tests[&#39;canvastext&#39;] = function() {
+        return !!(Modernizr[&#39;canvas&#39;] &amp;&amp; is(document.createElement(&#39;canvas&#39;).getContext(&#39;2d&#39;).fillText, &#39;function&#39;));
+    };
+
+
+
+    tests[&#39;webgl&#39;] = function() {
+        return !!window.WebGLRenderingContext;
+    };
+
+
+    tests[&#39;touch&#39;] = function() {
+        var bool;
+
+        if((&#39;ontouchstart&#39; in window) || window.DocumentTouch &amp;&amp; document instanceof DocumentTouch) {
+          bool = true;
+        } else {
+          injectElementWithStyles([&#39;@media (&#39;,prefixes.join(&#39;touch-enabled),(&#39;),mod,&#39;)&#39;,&#39;{#modernizr{top:9px;position:absolute}}&#39;].join(&#39;&#39;), function( node ) {
+            bool = node.offsetTop === 9;
+          });
+        }
+
+        return bool;
+    };
+
+
+
+    tests[&#39;geolocation&#39;] = function() {
+        return &#39;geolocation&#39; in navigator;
+    };
+
+
+    tests[&#39;postmessage&#39;] = function() {
+      return !!window.postMessage;
+    };
+
+
+    tests[&#39;websqldatabase&#39;] = function() {
+      return !!window.openDatabase;
+    };
+
+    tests[&#39;indexedDB&#39;] = function() {
+      return !!testPropsAll(&quot;indexedDB&quot;, window);
+    };
+
+    tests[&#39;hashchange&#39;] = function() {
+      return isEventSupported(&#39;hashchange&#39;, window) &amp;&amp; (document.documentMode === undefined || document.documentMode &gt; 7);
+    };
+
+    tests[&#39;history&#39;] = function() {
+      return !!(window.history &amp;&amp; history.pushState);
+    };
+
+    tests[&#39;draganddrop&#39;] = function() {
+        var div = document.createElement(&#39;div&#39;);
+        return (&#39;draggable&#39; in div) || (&#39;ondragstart&#39; in div &amp;&amp; &#39;ondrop&#39; in div);
+    };
+
+    tests[&#39;websockets&#39;] = function() {
+        return &#39;WebSocket&#39; in window || &#39;MozWebSocket&#39; in window;
+    };
+
+
+    tests[&#39;rgba&#39;] = function() {
+        setCss(&#39;background-color:rgba(150,255,150,.5)&#39;);
+
+        return contains(mStyle.backgroundColor, &#39;rgba&#39;);
+    };
+
+    tests[&#39;hsla&#39;] = function() {
+            setCss(&#39;background-color:hsla(120,40%,100%,.5)&#39;);
+
+        return contains(mStyle.backgroundColor, &#39;rgba&#39;) || contains(mStyle.backgroundColor, &#39;hsla&#39;);
+    };
+
+    tests[&#39;multiplebgs&#39;] = function() {
+                setCss(&#39;background:url(https://),url(https://),red url(https://)&#39;);
+
+            return (/(url\s*\(.*?){3}/).test(mStyle.background);
+    };    tests[&#39;backgroundsize&#39;] = function() {
+        return testPropsAll(&#39;backgroundSize&#39;);
+    };
+
+    tests[&#39;borderimage&#39;] = function() {
+        return testPropsAll(&#39;borderImage&#39;);
+    };
+
+
+
+    tests[&#39;borderradius&#39;] = function() {
+        return testPropsAll(&#39;borderRadius&#39;);
+    };
+
+    tests[&#39;boxshadow&#39;] = function() {
+        return testPropsAll(&#39;boxShadow&#39;);
+    };
+
+    tests[&#39;textshadow&#39;] = function() {
+        return document.createElement(&#39;div&#39;).style.textShadow === &#39;&#39;;
+    };
+
+
+    tests[&#39;opacity&#39;] = function() {
+                setCssAll(&#39;opacity:.55&#39;);
+
+                    return (/^0.55$/).test(mStyle.opacity);
+    };
+
+
+    tests[&#39;cssanimations&#39;] = function() {
+        return testPropsAll(&#39;animationName&#39;);
+    };
+
+
+    tests[&#39;csscolumns&#39;] = function() {
+        return testPropsAll(&#39;columnCount&#39;);
+    };
+
+
+    tests[&#39;cssgradients&#39;] = function() {
+        var str1 = &#39;background-image:&#39;,
+            str2 = &#39;gradient(linear,left top,right bottom,from(#9f9),to(white));&#39;,
+            str3 = &#39;linear-gradient(left top,#9f9, white);&#39;;
+
+        setCss(
+                       (str1 + &#39;-webkit- &#39;.split(&#39; &#39;).join(str2 + str1) +
+                       prefixes.join(str3 + str1)).slice(0, -str1.length)
+        );
+
+        return contains(mStyle.backgroundImage, &#39;gradient&#39;);
+    };
+
+
+    tests[&#39;cssreflections&#39;] = function() {
+        return testPropsAll(&#39;boxReflect&#39;);
+    };
+
+
+    tests[&#39;csstransforms&#39;] = function() {
+        return !!testPropsAll(&#39;transform&#39;);
+    };
+
+
+    tests[&#39;csstransforms3d&#39;] = function() {
+
+        var ret = !!testPropsAll(&#39;perspective&#39;);
+
+                        if ( ret &amp;&amp; &#39;webkitPerspective&#39; in docElement.style ) {
+
+                      injectElementWithStyles(&#39;@media (transform-3d),(-webkit-transform-3d){#modernizr{left:9px;position:absolute;height:3px;}}&#39;, function( node, rule ) {
+            ret = node.offsetLeft === 9 &amp;&amp; node.offsetHeight === 3;
+          });
+        }
+        return ret;
+    };
+
+
+    tests[&#39;csstransitions&#39;] = function() {
+        return testPropsAll(&#39;transition&#39;);
+    };
+
+
+
+    tests[&#39;fontface&#39;] = function() {
+        var bool;
+
+        injectElementWithStyles(&#39;@font-face {font-family:&quot;font&quot;;src:url(&quot;https://&quot;)}&#39;, function( node, rule ) {
+          var style = document.getElementById(&#39;smodernizr&#39;),
+              sheet = style.sheet || style.styleSheet,
+              cssText = sheet ? (sheet.cssRules &amp;&amp; sheet.cssRules[0] ? sheet.cssRules[0].cssText : sheet.cssText || &#39;&#39;) : &#39;&#39;;
+
+          bool = /src/i.test(cssText) &amp;&amp; cssText.indexOf(rule.split(&#39; &#39;)[0]) === 0;
+        });
+
+        return bool;
+    };
+
+    tests[&#39;generatedcontent&#39;] = function() {
+        var bool;
+
+        injectElementWithStyles([&#39;#&#39;,mod,&#39;{font:0/0 a}#&#39;,mod,&#39;:after{content:&quot;&#39;,smile,&#39;&quot;;visibility:hidden;font:3px/1 a}&#39;].join(&#39;&#39;), function( node ) {
+          bool = node.offsetHeight &gt;= 3;
+        });
+
+        return bool;
+    };
+    tests[&#39;video&#39;] = function() {
+        var elem = document.createElement(&#39;video&#39;),
+            bool = false;
+
+            try {
+            if ( bool = !!elem.canPlayType ) {
+                bool      = new Boolean(bool);
+                bool.ogg  = elem.canPlayType(&#39;video/ogg; codecs=&quot;theora&quot;&#39;)      .replace(/^no$/,&#39;&#39;);
+
+                            bool.h264 = elem.canPlayType(&#39;video/mp4; codecs=&quot;avc1.42E01E&quot;&#39;) .replace(/^no$/,&#39;&#39;);
+
+                bool.webm = elem.canPlayType(&#39;video/webm; codecs=&quot;vp8, vorbis&quot;&#39;).replace(/^no$/,&#39;&#39;);
+            }
+
+        } catch(e) { }
+
+        return bool;
+    };
+
+    tests[&#39;audio&#39;] = function() {
+        var elem = document.createElement(&#39;audio&#39;),
+            bool = false;
+
+        try {
+            if ( bool = !!elem.canPlayType ) {
+                bool      = new Boolean(bool);
+                bool.ogg  = elem.canPlayType(&#39;audio/ogg; codecs=&quot;vorbis&quot;&#39;).replace(/^no$/,&#39;&#39;);
+                bool.mp3  = elem.canPlayType(&#39;audio/mpeg;&#39;)               .replace(/^no$/,&#39;&#39;);
+
+                                                    bool.wav  = elem.canPlayType(&#39;audio/wav; codecs=&quot;1&quot;&#39;)     .replace(/^no$/,&#39;&#39;);
+                bool.m4a  = ( elem.canPlayType(&#39;audio/x-m4a;&#39;)            ||
+                              elem.canPlayType(&#39;audio/aac;&#39;))             .replace(/^no$/,&#39;&#39;);
+            }
+        } catch(e) { }
+
+        return bool;
+    };
+
+
+    tests[&#39;localstorage&#39;] = function() {
+        try {
+            localStorage.setItem(mod, mod);
+            localStorage.removeItem(mod);
+            return true;
+        } catch(e) {
+            return false;
+        }
+    };
+
+    tests[&#39;sessionstorage&#39;] = function() {
+        try {
+            sessionStorage.setItem(mod, mod);
+            sessionStorage.removeItem(mod);
+            return true;
+        } catch(e) {
+            return false;
+        }
+    };
+
+
+    tests[&#39;webworkers&#39;] = function() {
+        return !!window.Worker;
+    };
+
+
+    tests[&#39;applicationcache&#39;] = function() {
+        return !!window.applicationCache;
+    };
+
+
+    tests[&#39;svg&#39;] = function() {
+        return !!document.createElementNS &amp;&amp; !!document.createElementNS(ns.svg, &#39;svg&#39;).createSVGRect;
+    };
+
+    tests[&#39;inlinesvg&#39;] = function() {
+      var div = document.createElement(&#39;div&#39;);
+      div.innerHTML = &#39;&#39;;
+      return (div.firstChild &amp;&amp; div.firstChild.namespaceURI) == ns.svg;
+    };
+
+    tests[&#39;smil&#39;] = function() {
+        return !!document.createElementNS &amp;&amp; /SVGAnimate/.test(toString.call(document.createElementNS(ns.svg, &#39;animate&#39;)));
+    };
+
+
+    tests[&#39;svgclippaths&#39;] = function() {
+        return !!document.createElementNS &amp;&amp; /SVGClipPath/.test(toString.call(document.createElementNS(ns.svg, &#39;clipPath&#39;)));
+    };
+
+    function webforms() {
+                                            Modernizr[&#39;input&#39;] = (function( props ) {
+            for ( var i = 0, len = props.length; i &lt; len; i++ ) {
+                attrs[ props[i] ] = !!(props[i] in inputElem);
+            }
+            if (attrs.list){
+                                  attrs.list = !!(document.createElement(&#39;datalist&#39;) &amp;&amp; window.HTMLDataListElement);
+            }
+            return attrs;
+        })(&#39;autocomplete autofocus list placeholder max min multiple pattern required step&#39;.split(&#39; &#39;));
+                            Modernizr[&#39;inputtypes&#39;] = (function(props) {
+
+            for ( var i = 0, bool, inputElemType, defaultView, len = props.length; i &lt; len; i++ ) {
+
+                inputElem.setAttribute(&#39;type&#39;, inputElemType = props[i]);
+                bool = inputElem.type !== &#39;text&#39;;
+
+                                                    if ( bool ) {
+
+                    inputElem.value         = smile;
+                    inputElem.style.cssText = &#39;position:absolute;visibility:hidden;&#39;;
+
+                    if ( /^range$/.test(inputElemType) &amp;&amp; inputElem.style.WebkitAppearance !== undefined ) {
+
+                      docElement.appendChild(inputElem);
+                      defaultView = document.defaultView;
+
+                                        bool =  defaultView.getComputedStyle &amp;&amp;
+                              defaultView.getComputedStyle(inputElem, null).WebkitAppearance !== &#39;textfield&#39; &amp;&amp;
+                                                                                  (inputElem.offsetHeight !== 0);
+
+                      docElement.removeChild(inputElem);
+
+                    } else if ( /^(search|tel)$/.test(inputElemType) ){
+                                                                                    } else if ( /^(url|email)$/.test(inputElemType) ) {
+                                        bool = inputElem.checkValidity &amp;&amp; inputElem.checkValidity() === false;
+
+                    } else {
+                                        bool = inputElem.value != smile;
+                    }
+                }
+
+                inputs[ props[i] ] = !!bool;
+            }
+            return inputs;
+        })(&#39;search tel url email datetime date month week time datetime-local number range color&#39;.split(&#39; &#39;));
+        }
+    for ( var feature in tests ) {
+        if ( hasOwnProp(tests, feature) ) {
+                                    featureName  = feature.toLowerCase();
+            Modernizr[featureName] = tests[feature]();
+
+            classes.push((Modernizr[featureName] ? &#39;&#39; : &#39;no-&#39;) + featureName);
+        }
+    }
+
+    Modernizr.input || webforms();
+
+
+     Modernizr.addTest = function ( feature, test ) {
+       if ( typeof feature == &#39;object&#39; ) {
+         for ( var key in feature ) {
+           if ( hasOwnProp( feature, key ) ) {
+             Modernizr.addTest( key, feature[ key ] );
+           }
+         }
+       } else {
+
+         feature = feature.toLowerCase();
+
+         if ( Modernizr[feature] !== undefined ) {
+                                              return Modernizr;
+         }
+
+         test = typeof test == &#39;function&#39; ? test() : test;
+
+         if (typeof enableClasses !== &quot;undefined&quot; &amp;&amp; enableClasses) {
+           docElement.className += &#39; &#39; + (test ? &#39;&#39; : &#39;no-&#39;) + feature;
+         }
+         Modernizr[feature] = test;
+
+       }
+
+       return Modernizr; 
+     };
+
+
+    setCss(&#39;&#39;);
+    modElem = inputElem = null;
+
+    ;(function(window, document) {
+        var options = window.html5 || {};
+
+        var reSkip = /^&lt;|^(?:button|map|select|textarea|object|iframe|option|optgroup)$/i;
+
+        var saveClones = /^(?:a|b|code|div|fieldset|h1|h2|h3|h4|h5|h6|i|label|li|ol|p|q|span|strong|style|table|tbody|td|th|tr|ul)$/i;
+
+        var supportsHtml5Styles;
+
+        var expando = &#39;_html5shiv&#39;;
+
+        var expanID = 0;
+
+        var expandoData = {};
+
+        var supportsUnknownElements;
+
+      (function() {
+        try {
+            var a = document.createElement(&#39;a&#39;);
+            a.innerHTML = &#39;&#39;;
+                    supportsHtml5Styles = (&#39;hidden&#39; in a);
+
+            supportsUnknownElements = a.childNodes.length == 1 || (function() {
+                        (document.createElement)(&#39;a&#39;);
+              var frag = document.createDocumentFragment();
+              return (
+                typeof frag.cloneNode == &#39;undefined&#39; ||
+                typeof frag.createDocumentFragment == &#39;undefined&#39; ||
+                typeof frag.createElement == &#39;undefined&#39;
+              );
+            }());
+        } catch(e) {
+          supportsHtml5Styles = true;
+          supportsUnknownElements = true;
+        }
+
+      }());        function addStyleSheet(ownerDocument, cssText) {
+        var p = ownerDocument.createElement(&#39;p&#39;),
+            parent = ownerDocument.getElementsByTagName(&#39;head&#39;)[0] || ownerDocument.documentElement;
+
+        p.innerHTML = &#39;x&#39;;
+        return parent.insertBefore(p.lastChild, parent.firstChild);
+      }
+
+        function getElements() {
+        var elements = html5.elements;
+        return typeof elements == &#39;string&#39; ? elements.split(&#39; &#39;) : elements;
+      }
+
+          function getExpandoData(ownerDocument) {
+        var data = expandoData[ownerDocument[expando]];
+        if (!data) {
+            data = {};
+            expanID++;
+            ownerDocument[expando] = expanID;
+            expandoData[expanID] = data;
+        }
+        return data;
+      }
+
+        function createElement(nodeName, ownerDocument, data){
+        if (!ownerDocument) {
+            ownerDocument = document;
+        }
+        if(supportsUnknownElements){
+            return ownerDocument.createElement(nodeName);
+        }
+        if (!data) {
+            data = getExpandoData(ownerDocument);
+        }
+        var node;
+
+        if (data.cache[nodeName]) {
+            node = data.cache[nodeName].cloneNode();
+        } else if (saveClones.test(nodeName)) {
+            node = (data.cache[nodeName] = data.createElem(nodeName)).cloneNode();
+        } else {
+            node = data.createElem(nodeName);
+        }
+
+                                    return node.canHaveChildren &amp;&amp; !reSkip.test(nodeName) ? data.frag.appendChild(node) : node;
+      }
+
+        function createDocumentFragment(ownerDocument, data){
+        if (!ownerDocument) {
+            ownerDocument = document;
+        }
+        if(supportsUnknownElements){
+            return ownerDocument.createDocumentFragment();
+        }
+        data = data || getExpandoData(ownerDocument);
+        var clone = data.frag.cloneNode(),
+            i = 0,
+            elems = getElements(),
+            l = elems.length;
+        for(;i</code></pre>
+
+<p><code class="language-javascript">&nbsp;</code></p>
+
+      </ul>
+      <div class="keybq">
+        <p><span>关键字词</span>abcdef.js</p>
+      </div>
+      <div class="nextinfo">
+        <p>上一篇：<a href="./227.html">素材站，你喜欢的2</a></p>
+        <p>下一篇：<a href="./240.html">测试是否生成静态页1</a></p>
+      </div>
+      <!--评论 start-->
+            <div class="pinglun">
+                <h2>精彩评论</h2>
+                <ul>
+                    <li>
+                        <!--评论的主体-->
+                        <!--用户名的图像-->
+                        <img src="../Public/Home/images/50.jpg">
+                        <div class="parea">
+                            <!--回复用户名-->
+                            <div class="sender">王大拿</div>
+                            <!--回复内容-->
+                            <p class="pcontent">吃好喝好玩好</p>
+                            <!--回复时间-->
+                            <div><span>2016-11-11 12:00:00</span> <a href="#">回复</a></div>
+                        </div>
+                      <!--评论的主体end-->
+                      <!--回复评论的评论-->
+                      <ul >
+                        <li style="margin-left: 25px;border:none">
+                          <!--评论的主体-->
+                          <!--用户名的图像-->
+                          <img src="../Public/Home/images/50.jpg">
+                          <div class="parea">
+                            <!--回复用户名-->
+                            <div class="sender">王大拿</div>
+                            <!--回复内容-->
+                            <p class="pcontent">吃好喝好玩好</p>
+                            <!--回复时间-->
+                            <div><span>2016-11-11 12:00:00</span> <a href="#">回复</a></div>
+                          </div>
+                          <!--评论的主体end-->
+                            <!--回复评论的评论-->
+                            <ul >
+                              <li style="margin-left: 25px;border:none">
+                                <!--评论的主体-->
+                                <!--用户名的图像-->
+                                <img src="../Public/Home/images/50.jpg">
+                                <div class="parea">
+                                  <!--回复用户名-->
+                                  <div class="sender">王大拿</div>
+                                  <!--回复内容-->
+                                  <p class="pcontent">吃好喝好玩好</p>
+                                  <!--回复时间-->
+                                  <div><span>2016-11-11 12:00:00</span> <a href="#">回复</a></div>
+                                </div>
+                                <!--评论的主体end-->
+                              </li>
+                              <li style="margin-left: 25px;border:none">
+                                <!--评论的主体-->
+                                <!--用户名的图像-->
+                                <img src="../Public/Home/images/50.jpg">
+                                <div class="parea">
+                                  <!--回复用户名-->
+                                  <div class="sender">王大拿</div>
+                                  <!--回复内容-->
+                                  <p class="pcontent">吃好喝好玩好</p>
+                                  <!--回复时间-->
+                                  <div><span>2016-11-11 12:00:00</span> <a href="#">回复</a></div>
+                                </div>
+                                <!--评论的主体end-->
+                              </li>
+                            </ul>
+                            <!--回复评论的评论-->
+                        </li>
+                      </ul>
+                      <!--回复评论的评论-->
+                    </li>
+                    <li>
+                        <img src="../Public/Home/images/s7.jpg">
+                        <div class="parea">
+                            <div class="sender">谢大脚</div>
+                            <p class="pcontent">休息好睡好</p>
+                            <div>
+                                <span>2016-11-13</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <form action="?c=Art&a=addComment" method="post">
+                    <textarea name="content"></textarea>
+                    <input type="submit" value="发表">
+                </form>
+            </div>
+            <!--评论 end-->
+      <div class="otherlink">
+        <h2>相关文章</h2>
+        <ul>
+          <li><a href="/news/s/2013-07-25/524.html" title="现在，我相信爱情！">现在，我相信爱情！</a></li>
+          <li><a href="/newstalk/mood/2013-07-24/518.html" title="我希望我的爱情是这样的">我希望我的爱情是这样的</a></li>
+          <li><a href="/newstalk/mood/2013-07-02/335.html" title="有种情谊，不是爱情，也算不得友情">有种情谊，不是爱情，也算不得友情</a></li>
+          <li><a href="/newstalk/mood/2013-07-01/329.html" title="世上最美好的爱情">世上最美好的爱情</a></li>
+          <li><a href="/news/read/2013-06-11/213.html" title="爱情没有永远，地老天荒也走不完">爱情没有永远，地老天荒也走不完</a></li>
+          <li><a href="/news/s/2013-06-06/24.html" title="爱情的背叛者">爱情的背叛者</a></li>
+        </ul>
+      </div>
+    </div>
+  </article>
+  <aside>
+    <div class="rnav">
+            <li class="rnav1 "><a href="../List/24/1.html">咚咚咚</a></li>
+            <li class="rnav2 "><a href="../List/13/1.html">段子手</a></li>
+            <li class="rnav3 "><a href="../List/12/1.html">PHP</a></li>
+            <li class="rnav4 "><a href="../List/11/1.html">MySQL</a></li>
+      
+    </div>
+    <div class="ph_news">
+      <h2>
+        <p>点击排行</p>
+      </h2>
+      <ul class="ph_n">
+                <li><span class="num1">1</span><a href="../Article/156.html">ppap</a></li>
+                <li><span class="num2">2</span><a href="../Article/238.html">我是一个大玩家</a></li>
+                <li><span class="num3">3</span><a href="../Article/235.html">js和jquery的关系333</a></li>
+                <li><span class="num4">4</span><a href="../Article/160.html">mysql是最好的</a></li>
+                <li><span class="num5">5</span><a href="../Article/219.html">我是小盖盖</a></li>
+                <li><span class="num6">6</span><a href="../Article/189.html">我要上头条</a></li>
+                <li><span class="num7">7</span><a href="../Article/239.html">eeee12</a></li>
+                <li><span class="num8">8</span><a href="../Article/240.html">测试是否生成静态页1</a></li>
+                <li><span class="num9">9</span><a href="../Article/234.html">abcdef.js</a></li>
+        
+      </ul>
+      <h2>
+        <p>栏目推荐</p>
+      </h2>
+      <ul>
+        <li><a href="#">有一种思念，是淡淡的幸福,一个心情一行文字</a></li>
+        <li><a href="#">励志人生-要做一个潇洒的女人</a></li>
+        <li><a href="#">女孩都有浪漫的小情怀——浪漫的求婚词</a></li>
+        <li><a href="#">Green绿色小清新的夏天-个人博客模板</a></li>
+        <li><a href="#">女生清新个人博客网站模板</a></li>
+        <li><a href="#">Wedding-婚礼主题、情人节网站模板</a></li>
+        <li><a href="#">Column 三栏布局 个人网站模板</a></li>
+        <li><a href="#">时间煮雨-个人网站模板</a></li>
+        <li><a href="#">花气袭人是酒香—个人网站模板</a></li>
+      </ul>
+      <h2>
+        <p>最新评论</p>
+      </h2>
+      <ul class="pl_n">
+        <dl>
+          <dt><img src="./Public/Home/images/s8.jpg"> </dt>
+          <dt> </dt>
+          <dd>DanceSmile
+            <time>49分钟前</time>
+          </dd>
+          <dd><a href="/">文章非常详细，我很喜欢.前端的工程师很少，我记得几年前yahoo花高薪招聘前端也招不到</a></dd>
+        </dl>
+        <dl>
+          <dt><img src="./Public/Home/images/s7.jpg"> </dt>
+          <dt> </dt>
+          <dd>yisa
+            <time>2小时前</time>
+          </dd>
+          <dd><a href="/">我手机里面也有这样一个号码存在</a></dd>
+        </dl>
+        <dl>
+          <dt><img src="./Public/Home/images/s6.jpg"> </dt>
+          <dt> </dt>
+          <dd>小林博客
+            <time>8月7日</time>
+          </dd>
+          <dd><a href="/">博客色彩丰富，很是好看</a></dd>
+        </dl>
+        <dl>
+          <dt><img src="./Public/Home/images/003.jpg"> </dt>
+          <dt> </dt>
+          <dd>DanceSmile
+            <time>49分钟前</time>
+          </dd>
+          <dd><a href="/">文章非常详细，我很喜欢.前端的工程师很少，我记得几年前yahoo花高薪招聘前端也招不到</a></dd>
+        </dl>
+        <dl>
+          <dt><img src="./Public/Home/images/002.jpg"> </dt>
+          <dt> </dt>
+          <dd>yisa
+            <time>2小时前</time>
+          </dd>
+          <dd><a href="/">我手机里面也有这样一个号码存在</a></dd>
+        </dl>
+      </ul>
+      <h2>
+        <p>最近访客</p>
+        <ul>
+          <img src="./Public/Home/images/vis.jpg"><!-- 直接使用“多说”插件的调用代码 -->
+        </ul>
+      </h2>
+    </div>
+    <div class="copyright">
+      <ul>
+        <p> Design by <a href="/">DanceSmile</a></p>
+        <p>蜀ICP备11002373号-1</p>
+        </p>
+      </ul>
+    </div>
+  </aside>
+  <script src="js/silder.js"></script>
+  <div class="clear"></div>
+  <!-- 清除浮动 --> 
+</div>
+</body>
+</html>

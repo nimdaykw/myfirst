@@ -1,0 +1,387 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>大家好,我是kkkkkkk君</title>
+<meta name="keywords" content="key多少" />
+<meta name="description" content="我说的你们不懂,你说的我们不知道" />
+  <link href="../Public/Home/css/base.css" rel="stylesheet">
+  <link href="../Public/Home/css/style.css" rel="stylesheet">
+  <link href="../Public/Home/css/media.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+  <!--[if lt IE 9]>
+  <script src="../Public/Home/js/modernizr.js"></script>
+<![endif]-->
+  <link rel="stylesheet" href="../Public/highlight/default.css">
+  <script src="../Public/highlight/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+<div class="ibody">
+  <header>
+    <h1>如影随形</h1>
+    <h2>影子是一个会撒谎的精灵，它在虚空中流浪和等待被发现之间;在存在与不存在之间....</h2>
+    <div class="logo"><a href="#"></a></div>
+    <nav id="topnav">
+                    <a href="../../Home/index.html">首页</a>
+                                                                                                                                                                                                                                                                                                                                    <a href="/List/4/1.html">相册</a>
+                                                            <a href="/List/3/1.html">学无止境</a>
+                                                            <a href="/List/2/1.html">慢生活</a>
+                                                            <a href="/List/1/1.html">关于我22</a>
+                            
+        
+    </nav>
+</header>
+  <article>
+    <h2 class="about_h">您现在的位置是： <a href="../Home/index.html">首页</a>>
+            <a href="../List/2/1.html">慢生活</a>>
+            <a href="../List/7/1.html">经典语录</a>>
+            <a href="../List/13/1.html">段子手</a>>
+      
+      <span style="color:red">大家好,我是kkkk...</span>
+    </h2>
+    <div class="index_about">
+      <h2 class="c_titile">大家好,我是kkkkkkk君</h2>
+      <p class="box_c"><span class="d_time">发布时间：2017-02-28</span>
+        <span>分类：<a href="../List/13/1.html">段子手</a></span>
+        <span>浏览（352）</span><span>评论览（14）</span></p>
+      <ul class="infos">
+        <pre>
+<code class="language-html">&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;title&gt;黑色Html5响应式个人博客模板——主题《如影随形》&lt;/title&gt;
+&lt;meta name="keywords" content="个人博客模板,博客模板,响应式" /&gt;
+&lt;meta name="description" content="如影随形主题的个人博客模板，神秘、俏皮。" /&gt;
+&lt;link href="../.{_CSS_PATH}base.css" rel="stylesheet"&gt;
+&lt;link href="../.{_CSS_PATH}index.css" rel="stylesheet"&gt;
+&lt;link href="../.{_CSS_PATH}media.css" rel="stylesheet"&gt;
+&lt;meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0"&gt;
+&lt;!--[if lt IE 9]&gt;
+&lt;script src="../.{_JS_PATH}modernizr.js"&gt;&lt;/script&gt;
+&lt;![endif]--&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class="ibody"&gt;
+  &lt;!--&lt;header&gt;--&gt;
+    &lt;!--&lt;h1&gt;如影随形&lt;/h1&gt;--&gt;
+    &lt;!--&lt;h2&gt;影子是一个会撒谎的精灵，它在虚空中流浪和等待被发现之间;在存在与不存在之间....&lt;/h2&gt;--&gt;
+    &lt;!--&lt;div class="logo"&gt;&lt;a href="/"&gt;&lt;/a&gt;&lt;/div&gt;--&gt;
+    &lt;!--&lt;nav id="topnav"&gt;&lt;a href="index.html"&gt;首页&lt;/a&gt;&lt;a href="about.html"&gt;关于我&lt;/a&gt;&lt;a href="newlist.html"&gt;慢生活&lt;/a&gt;&lt;a href="share.html"&gt;模板分享&lt;/a&gt;&lt;a href="new.html"&gt;模板主题&lt;/a&gt;&lt;/nav&gt;--&gt;
+  &lt;!--&lt;/header&gt;--&gt;
+  {include file='../Index/header.html'}
+
+  &lt;article&gt;
+    &lt;div class="banner"&gt;
+      &lt;ul class="texts"&gt;
+        &lt;p&gt;The best life is use of willing attitude, a happy-go-lucky life. &lt;/p&gt;
+        &lt;p&gt;最好的生活是用心甘情愿的态度，过随遇而安的生活。&lt;/p&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class="bloglist"&gt;
+      &lt;h2&gt;
+        &lt;p&gt;&lt;span&gt;推荐&lt;/span&gt;文章&lt;/p&gt;
+      &lt;/h2&gt;
+      &lt;!--推荐文章列表 begin--&gt;
+      {foreach $data as $value}
+      &lt;div class="blogs"&gt;
+        &lt;h3&gt;&lt;a href="../Article/{$value.articleid}.html"&gt;{$value.title}&lt;/a&gt;&lt;/h3&gt;
+        &lt;figure&gt;&lt;img style="width:173px;height:116px" src="../.{$value.pic}" &gt;&lt;/figure&gt;
+        &lt;ul&gt;
+          &lt;p&gt;{$value.description}&lt;/p&gt;
+          &lt;a href="../Article/{$value.articleid}.html" target="_blank" class="readmore"&gt;阅读全文&amp;gt;&amp;gt;&lt;/a&gt;
+        &lt;/ul&gt;
+        &lt;p class="autor"&gt;
+          &lt;span&gt;作者：{$value.author}&lt;/span&gt;
+          &lt;span&gt;分类：【&lt;a href="../List/{$value.cid}/1.html"&gt;{$value.name}&lt;/a&gt;】&lt;/span&gt;
+          &lt;span&gt;浏览（&lt;a href="#"&gt;{$value.hits}&lt;/a&gt;）&lt;/span&gt;
+          &lt;span&gt;评论（&lt;a href="#"&gt;30&lt;/a&gt;）&lt;/span&gt;&lt;/p&gt;
+        &lt;div class="dateview"&gt;{$value.ptime}&lt;/div&gt;
+      &lt;/div&gt;
+      {/foreach}
+      &lt;!--推荐文章列表 end--&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+  &lt;aside&gt;
+    &lt;div class="avatar"&gt;&lt;a href="about.html"&gt;&lt;span&gt;关于我&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+    &lt;div class="topspaceinfo"&gt;
+      &lt;h1&gt;执子之手，与子偕老&lt;/h1&gt;
+      &lt;p&gt;于千万人之中，我遇见了我所遇见的人....&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="about_c"&gt;
+      &lt;p&gt;网名：DanceSmile | 即步非烟&lt;/p&gt;
+      &lt;p&gt;职业：Web前端设计师、网页设计 &lt;/p&gt;
+      &lt;p&gt;籍贯：四川省—成都市&lt;/p&gt;
+      &lt;p&gt;电话：13662012345&lt;/p&gt;
+      &lt;p&gt;邮箱：dancesmiling@qq.com&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="bdsharebuttonbox"&gt;&lt;a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"&gt;&lt;/a&gt;&lt;a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"&gt;&lt;/a&gt;&lt;a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"&gt;&lt;/a&gt;&lt;a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"&gt;&lt;/a&gt;&lt;a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"&gt;&lt;/a&gt;&lt;a href="#" class="bds_more" data-cmd="more"&gt;&lt;/a&gt;&lt;/div&gt;
+    &lt;div class="tj_news"&gt;
+      &lt;h2&gt;
+        &lt;p class="tj_t1"&gt;最新文章&lt;/p&gt;
+      &lt;/h2&gt;
+      &lt;ul&gt;
+        {foreach $newdata as $k=&gt;$v}
+
+        &lt;li&gt;&lt;a href="../Article/{$v.articleid}.html"&gt;{$v.title|truncate:15}&lt;/a&gt;&lt;/li&gt;
+        {/foreach}
+        &lt;!--&lt;li&gt;&lt;a href="/"&gt;两只蜗牛艰难又浪漫的一吻&lt;/a&gt;&lt;/li&gt;--&gt;
+        &lt;!--&lt;li&gt;&lt;a href="/"&gt;春暖花开-走走停停-发现美&lt;/a&gt;&lt;/li&gt;--&gt;
+        &lt;!--&lt;li&gt;&lt;a href="/"&gt;琰智国际-Nativ for Life官方网站&lt;/a&gt;&lt;/li&gt;--&gt;
+        &lt;!--&lt;li&gt;&lt;a href="/"&gt;个人博客模板（2014草根寻梦）&lt;/a&gt;&lt;/li&gt;--&gt;
+        &lt;!--&lt;li&gt;&lt;a href="/"&gt;简单手工纸玫瑰&lt;/a&gt;&lt;/li&gt;--&gt;
+        &lt;!--&lt;li&gt;&lt;a href="/"&gt;响应式个人博客模板（蓝色清新）&lt;/a&gt;&lt;/li&gt;--&gt;
+        &lt;!--&lt;li&gt;&lt;a href="/"&gt;蓝色政府（卫生计划生育局）网站&lt;/a&gt;&lt;/li&gt;--&gt;
+      &lt;/ul&gt;
+      &lt;h2&gt;
+        &lt;p class="tj_t2"&gt;推荐文章&lt;/p&gt;
+      &lt;/h2&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="/"&gt;犯错了怎么办？&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/"&gt;两只蜗牛艰难又浪漫的一吻&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/"&gt;春暖花开-走走停停-发现美&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/"&gt;琰智国际-Nativ for Life官方网站&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/"&gt;个人博客模板（2014草根寻梦）&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/"&gt;简单手工纸玫瑰&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/"&gt;响应式个人博客模板（蓝色清新）&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/"&gt;蓝色政府（卫生计划生育局）网站&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class="links"&gt;
+      &lt;h2&gt;
+        &lt;p&gt;友情链接&lt;/p&gt;
+      &lt;/h2&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="/"&gt;W3C&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/"&gt;3DST技术社区&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class="copyright"&gt;
+      &lt;ul&gt;
+        &lt;p&gt; Design by &lt;a href="/"&gt;DanceSmile&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;蜀ICP备11002373号-1&lt;/p&gt;
+        &lt;/p&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/aside&gt;
+  &lt;script src="js/silder.js"&gt;&lt;/script&gt;
+  &lt;div class="clear"&gt;&lt;/div&gt;
+  &lt;!-- 清除浮动 --&gt; 
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>&nbsp;</p>
+
+      </ul>
+      <div class="keybq">
+        <p><span>关键字词</span>key多少</p>
+      </div>
+      <div class="nextinfo">
+        <p>上一篇：<a href="./77.html">君住长江头，我住长江尾</a></p>
+        <p>下一篇：<a href="./240.html">测试是否生成静态页1</a></p>
+      </div>
+      <!--评论 start-->
+            <div class="pinglun">
+                <h2>精彩评论</h2>
+                <ul>
+                    <li>
+                        <!--评论的主体-->
+                        <!--用户名的图像-->
+                        <img src="../Public/Home/images/50.jpg">
+                        <div class="parea">
+                            <!--回复用户名-->
+                            <div class="sender">王大拿</div>
+                            <!--回复内容-->
+                            <p class="pcontent">吃好喝好玩好</p>
+                            <!--回复时间-->
+                            <div><span>2016-11-11 12:00:00</span> <a href="#">回复</a></div>
+                        </div>
+                      <!--评论的主体end-->
+                      <!--回复评论的评论-->
+                      <ul >
+                        <li style="margin-left: 25px;border:none">
+                          <!--评论的主体-->
+                          <!--用户名的图像-->
+                          <img src="../Public/Home/images/50.jpg">
+                          <div class="parea">
+                            <!--回复用户名-->
+                            <div class="sender">王大拿</div>
+                            <!--回复内容-->
+                            <p class="pcontent">吃好喝好玩好</p>
+                            <!--回复时间-->
+                            <div><span>2016-11-11 12:00:00</span> <a href="#">回复</a></div>
+                          </div>
+                          <!--评论的主体end-->
+                            <!--回复评论的评论-->
+                            <ul >
+                              <li style="margin-left: 25px;border:none">
+                                <!--评论的主体-->
+                                <!--用户名的图像-->
+                                <img src="../Public/Home/images/50.jpg">
+                                <div class="parea">
+                                  <!--回复用户名-->
+                                  <div class="sender">王大拿</div>
+                                  <!--回复内容-->
+                                  <p class="pcontent">吃好喝好玩好</p>
+                                  <!--回复时间-->
+                                  <div><span>2016-11-11 12:00:00</span> <a href="#">回复</a></div>
+                                </div>
+                                <!--评论的主体end-->
+                              </li>
+                              <li style="margin-left: 25px;border:none">
+                                <!--评论的主体-->
+                                <!--用户名的图像-->
+                                <img src="../Public/Home/images/50.jpg">
+                                <div class="parea">
+                                  <!--回复用户名-->
+                                  <div class="sender">王大拿</div>
+                                  <!--回复内容-->
+                                  <p class="pcontent">吃好喝好玩好</p>
+                                  <!--回复时间-->
+                                  <div><span>2016-11-11 12:00:00</span> <a href="#">回复</a></div>
+                                </div>
+                                <!--评论的主体end-->
+                              </li>
+                            </ul>
+                            <!--回复评论的评论-->
+                        </li>
+                      </ul>
+                      <!--回复评论的评论-->
+                    </li>
+                    <li>
+                        <img src="../Public/Home/images/s7.jpg">
+                        <div class="parea">
+                            <div class="sender">谢大脚</div>
+                            <p class="pcontent">休息好睡好</p>
+                            <div>
+                                <span>2016-11-13</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <form action="?c=Art&a=addComment" method="post">
+                    <textarea name="content"></textarea>
+                    <input type="submit" value="发表">
+                </form>
+            </div>
+            <!--评论 end-->
+      <div class="otherlink">
+        <h2>相关文章</h2>
+        <ul>
+          <li><a href="/news/s/2013-07-25/524.html" title="现在，我相信爱情！">现在，我相信爱情！</a></li>
+          <li><a href="/newstalk/mood/2013-07-24/518.html" title="我希望我的爱情是这样的">我希望我的爱情是这样的</a></li>
+          <li><a href="/newstalk/mood/2013-07-02/335.html" title="有种情谊，不是爱情，也算不得友情">有种情谊，不是爱情，也算不得友情</a></li>
+          <li><a href="/newstalk/mood/2013-07-01/329.html" title="世上最美好的爱情">世上最美好的爱情</a></li>
+          <li><a href="/news/read/2013-06-11/213.html" title="爱情没有永远，地老天荒也走不完">爱情没有永远，地老天荒也走不完</a></li>
+          <li><a href="/news/s/2013-06-06/24.html" title="爱情的背叛者">爱情的背叛者</a></li>
+        </ul>
+      </div>
+    </div>
+  </article>
+  <aside>
+    <div class="rnav">
+            <li class="rnav1 "><a href="../List/24/1.html">咚咚咚</a></li>
+            <li class="rnav2 "><a href="../List/13/1.html">段子手</a></li>
+            <li class="rnav3 "><a href="../List/12/1.html">PHP</a></li>
+            <li class="rnav4 "><a href="../List/11/1.html">MySQL</a></li>
+      
+    </div>
+    <div class="ph_news">
+      <h2>
+        <p>点击排行</p>
+      </h2>
+      <ul class="ph_n">
+                <li><span class="num1">1</span><a href="../Article/156.html">ppap</a></li>
+                <li><span class="num2">2</span><a href="../Article/238.html">我是一个大玩家</a></li>
+                <li><span class="num3">3</span><a href="../Article/235.html">js和jquery的关系333</a></li>
+                <li><span class="num4">4</span><a href="../Article/160.html">mysql是最好的</a></li>
+                <li><span class="num5">5</span><a href="../Article/219.html">我是小盖盖</a></li>
+                <li><span class="num6">6</span><a href="../Article/189.html">我要上头条</a></li>
+                <li><span class="num7">7</span><a href="../Article/239.html">eeee12</a></li>
+                <li><span class="num8">8</span><a href="../Article/240.html">测试是否生成静态页1</a></li>
+                <li><span class="num9">9</span><a href="../Article/234.html">abcdef.js</a></li>
+        
+      </ul>
+      <h2>
+        <p>栏目推荐</p>
+      </h2>
+      <ul>
+        <li><a href="#">有一种思念，是淡淡的幸福,一个心情一行文字</a></li>
+        <li><a href="#">励志人生-要做一个潇洒的女人</a></li>
+        <li><a href="#">女孩都有浪漫的小情怀——浪漫的求婚词</a></li>
+        <li><a href="#">Green绿色小清新的夏天-个人博客模板</a></li>
+        <li><a href="#">女生清新个人博客网站模板</a></li>
+        <li><a href="#">Wedding-婚礼主题、情人节网站模板</a></li>
+        <li><a href="#">Column 三栏布局 个人网站模板</a></li>
+        <li><a href="#">时间煮雨-个人网站模板</a></li>
+        <li><a href="#">花气袭人是酒香—个人网站模板</a></li>
+      </ul>
+      <h2>
+        <p>最新评论</p>
+      </h2>
+      <ul class="pl_n">
+        <dl>
+          <dt><img src="./Public/Home/images/s8.jpg"> </dt>
+          <dt> </dt>
+          <dd>DanceSmile
+            <time>49分钟前</time>
+          </dd>
+          <dd><a href="/">文章非常详细，我很喜欢.前端的工程师很少，我记得几年前yahoo花高薪招聘前端也招不到</a></dd>
+        </dl>
+        <dl>
+          <dt><img src="./Public/Home/images/s7.jpg"> </dt>
+          <dt> </dt>
+          <dd>yisa
+            <time>2小时前</time>
+          </dd>
+          <dd><a href="/">我手机里面也有这样一个号码存在</a></dd>
+        </dl>
+        <dl>
+          <dt><img src="./Public/Home/images/s6.jpg"> </dt>
+          <dt> </dt>
+          <dd>小林博客
+            <time>8月7日</time>
+          </dd>
+          <dd><a href="/">博客色彩丰富，很是好看</a></dd>
+        </dl>
+        <dl>
+          <dt><img src="./Public/Home/images/003.jpg"> </dt>
+          <dt> </dt>
+          <dd>DanceSmile
+            <time>49分钟前</time>
+          </dd>
+          <dd><a href="/">文章非常详细，我很喜欢.前端的工程师很少，我记得几年前yahoo花高薪招聘前端也招不到</a></dd>
+        </dl>
+        <dl>
+          <dt><img src="./Public/Home/images/002.jpg"> </dt>
+          <dt> </dt>
+          <dd>yisa
+            <time>2小时前</time>
+          </dd>
+          <dd><a href="/">我手机里面也有这样一个号码存在</a></dd>
+        </dl>
+      </ul>
+      <h2>
+        <p>最近访客</p>
+        <ul>
+          <img src="./Public/Home/images/vis.jpg"><!-- 直接使用“多说”插件的调用代码 -->
+        </ul>
+      </h2>
+    </div>
+    <div class="copyright">
+      <ul>
+        <p> Design by <a href="/">DanceSmile</a></p>
+        <p>蜀ICP备11002373号-1</p>
+        </p>
+      </ul>
+    </div>
+  </aside>
+  <script src="js/silder.js"></script>
+  <div class="clear"></div>
+  <!-- 清除浮动 --> 
+</div>
+</body>
+</html>

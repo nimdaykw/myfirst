@@ -1,0 +1,211 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>后台管理-修改文章信息</title>
+    <link rel="stylesheet" type="text/css" href="{$CSS}common.css"/>
+    <link rel="stylesheet" type="text/css" href="{$CSS}main.css"/>
+    <script type="text/javascript" src="{$JS}libs/modernizr.min.js"></script>
+    <script type="text/javascript" src="{$JS}jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="{$JS}laydate/laydate.js"></script>
+    <script type="text/javascript" src="{_CK_PATH}ckeditor.js"></script>
+    <script type="text/javascript" src="{_PLUGINS}uploadPreview/uploadPreview.js"></script>
+    {literal}
+    <script>
+        $(function(){
+
+            $('#upfile').change(function(e){
+                var _filesss=e.target.files;
+                var f=Array(_filesss[0].name,2,3,4);
+
+                $.ajax({
+                    url:'./test.php',
+                    type:'post',
+                    data:$('#upfile').serialize(),
+                    success:function(result)
+                    {
+                        alert(result);
+                    }
+                })
+
+            })
+        })
+        function upload()
+        {
+            $('#upfile').click();
+
+        }
+    </script>
+    {/literal}
+</head>
+<body>
+
+
+<div class="topbar-wrap white">
+    <div class="topbar-inner clearfix">
+        <div class="topbar-logo-wrap clearfix">
+            <h1 class="topbar-logo none"><a href="index.html" class="navbar-brand">后台管理</a></h1>
+            <ul class="navbar-list clearfix">
+                <li><a class="on" href="index.html">首页</a></li>
+                <li><a href="#" target="_blank">网站首页</a></li>
+            </ul>
+        </div>
+        <div class="top-info-wrap">
+            <ul class="top-info-list clearfix">
+                <li><a href="http://www.jscss.me">管理员</a></li>
+                <li><a href="http://www.jscss.me">修改密码</a></li>
+                <li><a href="http://www.jscss.me">退出</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container clearfix">
+    <!--左侧菜单栏 begin-->
+    {include file='../Public/frame_left.html'}
+    <!--左侧菜单栏 end-->
+    
+    <!--右侧主操作区-->
+    <div class="main-wrap">
+
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i>
+                <a href="?p=back">首页</a>
+                <span class="crumb-step">&gt;</span>
+                <span class="crumb-name">博文管理</span>
+                <span class="crumb-step">&gt;</span>
+                <span class="crumb-name">添加博文</span>
+            </div>
+        </div>
+        <div class="result-wrap">
+            <div class="result-content">
+                <form enctype="multipart/form-data" action="?c=Article&a=updateHandle" method="post" id="myform" >
+                    <table class="insert-tab" width="100%">
+                        <tbody>
+                            <tr>
+                                <th><i class="require-red">*</i>所属分类：</th>
+                                <td>
+                                   <select name="cid">
+                                       <option value="0">请选择</option>
+                                       {foreach $data as $key=>$val}
+                                       <option {if $rows.cid==$val.categoryid} selected="selected" {/if} style="padding-left:{$val.lev*15}px" value='{$val.categoryid}'>{$val.name}</option>
+                                       {/foreach}
+                                   </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>标题：</th>
+                                <td>
+                                    <input type="hidden" name="id" value="{$rows.articleid}"/>
+                                    <input type="hidden" name="urlcid" value="{$cid}"/>
+                                    <input class="common-text required" name="title" size="50" value="{$rows.title}" type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>发布时间：</th>
+                                <td>
+                                    <input id="pub" class="common-text required" name="ptime" size="50" value="{$rows.ptime}" type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>作者：</th>
+                                <td>
+                                    <input class="common-text required" name="author" size="50" value="{$rows.author}" type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>浏览量(点击数)：</th>
+                                <td>
+                                    <input class="common-text required" name="hits" size="50" value="{$rows.hits}" type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>别名：</th>
+                                <td>
+                                    <input class="common-text required" name="alias" size="50" value="{$rows.alias}" type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>关键字：</th>
+                                <td>
+                                    <input class="common-text required" name="keyword" size="50" value="{$rows.keyword}" type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>描述：</th>
+                                <td>
+                                    <input class="common-text required" name="description" size="50" value="{$rows.description}" type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>上传图片：</th>
+                                <td style="position: relative">
+
+                                    <input id="filepic" class="common-text required" name="pic" size="50" value="{$rows.pic}" type="file">
+                                    {if $rows.pic!=""}
+                                    <img id="imgpic"  style="width:400px;height:240px;position:absolute ; right:40px;top:-220px; " src="{$rows.pic}">
+                                    {else}
+                                    <img id="imgpic">
+                                    {/if}
+                                    <input type="hidden" name="pic_src" value="{$rows.pic}"/>
+                                </td>
+                            </tr>
+                            <!--<tr>-->
+                                <!--<th><i class="require-red">*</i>上传图片：</th>-->
+                                <!--<td >-->
+                                    <!--<input id="upfile" style="display: none;"  size="50"  type="file">&lt;!&ndash;value="{$rows.pic}"&ndash;&gt;-->
+                                   <!--&lt;!&ndash; <input onclick="upload()" type="button" value="点击上传"/>&ndash;&gt;-->
+                                <!--</td>-->
+                            <!--</tr>-->
+
+                            <tr>
+                                <th><i class="require-red">*</i>内容：</th>
+                                <td>
+                                    <textarea id="con" name="content" class="common-textarea" cols="100" rows="20">{$rows.content}</textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td>
+                                    <input class="btn btn-primary btn6 mr10" value="提交" type="submit">
+                                    <input class="btn btn6" onclick="history.go(-1)" value="返回" type="button">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+    <!--/右侧主操作区-->
+</div>
+
+</body>
+<!--ckeditor富文本框编辑器-->
+<script>
+    CKEDITOR.replace('con',{
+        //绑定ckeditor的配置文件,所有设置都可以在配置文件设置
+        customConfig:'custom.js'
+    });
+</script>
+<!--ckeditor富文本框编辑器 end-->
+<!--日历控件开始  要放在你绑定id的后面-->
+<script>
+    ;!function(){
+        laydate.skin('dahong')
+        laydate({
+            elem: '#pub'
+        })
+    }();
+</script>
+<!--日历控件结束 -->
+<!--上传图片实时预览begin-->
+<script>
+    $(function(){
+        new uploadPreview({ UpBtn: "filepic", DivShow: "divpic", ImgShow: "imgpic" });
+    })
+</script>
+<!--上传图片实时预览end-->
+</html>
